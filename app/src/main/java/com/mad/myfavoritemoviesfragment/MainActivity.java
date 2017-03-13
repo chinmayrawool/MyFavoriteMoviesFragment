@@ -64,4 +64,9 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnFr
                 .addToBackStack(null)
                 .commit();
     }
+
+    @Override
+    public void sendMovie(Movie movie) {
+
+    }
 }
