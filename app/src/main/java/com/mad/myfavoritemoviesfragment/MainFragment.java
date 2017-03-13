@@ -107,6 +107,7 @@ public class MainFragment extends Fragment {
     public interface OnFragmentInterface{
         void OnTextChange(String text);
         void gotoAddMovie();
+        void gotoEditMovie(Movie movie);
     }
 
 }
