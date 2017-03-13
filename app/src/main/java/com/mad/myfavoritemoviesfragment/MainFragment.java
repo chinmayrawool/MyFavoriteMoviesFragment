@@ -20,7 +20,7 @@ import java.util.ArrayList;
  * A simple {@link Fragment} subclass.
  */
 public class MainFragment extends Fragment {
-    ArrayList<Movie> movieArrayList = new ArrayList<Movie>();
+    ArrayList<Movie> movieArrayList;
     String[] movieNames;
     int movieIndex;
     public MainFragment() {
@@ -52,6 +52,7 @@ public class MainFragment extends Fragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         Log.d("demo","AFragment: onActivityCreated");
+        movieArrayList = new ArrayList<Movie>();
         getView().findViewById(R.id.buttonAddMovie).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -62,6 +63,7 @@ public class MainFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 movieArrayList= mListener.list();
+
                 if(movieArrayList.size()!=0) {
                     movieNames = getMovieNames();
                     AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
@@ -154,7 +156,6 @@ public class MainFragment extends Fragment {
     }
 
     public interface OnFragmentInterface{
-        void OnTextChange(String text);
         void gotoAddMovie();
         void gotoEditMovie(Movie movie);
         public ArrayList<Movie> list();
@@ -164,6 +165,7 @@ public class MainFragment extends Fragment {
     }
 
     public String[] getMovieNames(){
+        movieNames = new String[movieArrayList.size()];
         for (int i = 0; i < movieArrayList.size(); i++) {
             movieNames[i] = movieArrayList.get(i).getName();
         }

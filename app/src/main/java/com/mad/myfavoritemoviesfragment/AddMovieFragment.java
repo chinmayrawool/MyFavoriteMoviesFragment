@@ -140,6 +140,7 @@ public class AddMovieFragment extends Fragment {
                     Toast.makeText(mainActivity,getResources().getString(R.string.error_imdblink),Toast.LENGTH_SHORT).show();
                 }else{
                     onButtonPressed(movie);
+
                 }
             }
         });
