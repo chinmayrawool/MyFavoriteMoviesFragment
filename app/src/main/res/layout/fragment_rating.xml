@@ -1,0 +1,225 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mad.myfavoritemoviesfragment.RatingFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/fragment_rating"
+        android:orientation="vertical">
+
+        <TextView
+            android:text="@string/label_movies_by_rating"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewMoviesByRating"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:gravity="center"
+            android:textStyle="normal|bold"
+            android:padding="3dp"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="2dp">
+
+            <TextView
+                android:layout_width="91dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewTitle"
+                android:text="@string/label_movie_title"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:padding="3dp"
+                android:textStyle="normal|bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewTitleOutput"
+                android:layout_weight="3.66"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:padding="3dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="2dp">
+
+            <TextView
+                android:text="@string/label_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewDescription"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:padding="3dp"
+                android:textStyle="normal|bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="84dp"
+                android:id="@+id/textViewDescriptionOutput"
+                android:padding="3dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textSize="18sp"
+                android:background="@drawable/border"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="2dp">
+
+            <TextView
+                android:text="@string/label_genre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewGenre"
+                android:layout_weight="0.33"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:padding="3dp"
+                android:textStyle="normal|bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewGenreOutput"
+                android:layout_weight="1.78"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:padding="3dp"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="2dp">
+
+            <TextView
+                android:text="@string/label_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewRating"
+                android:layout_weight="0.16"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:padding="3dp"
+                android:textStyle="normal|bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewRatingOutput"
+                android:layout_weight="1"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:padding="3dp"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="2dp">
+
+            <TextView
+                android:text="@string/label_year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewYear"
+                android:layout_weight="0.24"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:padding="3dp"
+                android:textStyle="normal|bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewYearOutput"
+                android:layout_weight="1"
+                android:padding="3dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:padding="2dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewIMDB"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:text="@string/label_imdb"
+                android:padding="3dp"
+                android:textStyle="normal|bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/textViewIMDBOutput"
+                android:padding="3dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:gravity="center"
+            android:padding="2dp"
+            android:layout_marginTop="2dp">
+
+            <ImageButton
+                android:layout_width="52dp"
+                android:layout_height="49dp"
+                app:srcCompat="@drawable/first"
+                android:id="@+id/imageButtonFirst"
+                android:scaleType="fitCenter" />
+
+            <ImageButton
+                android:layout_width="42dp"
+                android:layout_height="49dp"
+                app:srcCompat="@drawable/previous"
+                android:id="@+id/imageButtonPrevious"
+                android:scaleType="fitCenter" />
+
+            <Button
+                android:text="@string/btn_finish"
+                android:layout_width="128dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/buttonFinishRating"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textStyle="normal|bold" />
+
+            <ImageButton
+                android:layout_width="46dp"
+                android:layout_height="50dp"
+                app:srcCompat="@drawable/next"
+                android:id="@+id/imageButtonNext"
+                android:scaleType="fitCenter"
+                android:layout_weight="0.11" />
+
+            <ImageButton
+                android:layout_width="44dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/last"
+                android:id="@+id/imageButtonLast"
+                android:scaleType="fitCenter" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

@@ -5,7 +5,7 @@ import android.os.Bundle;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity implements MainFragment.OnFragmentInterface{
+public class MainActivity extends AppCompatActivity implements MainFragment.OnFragmentInterface,AddMovieFragment.OnFragmentInteractionListener{
     ArrayList<Movie> movieArrayList = new ArrayList<Movie>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +34,33 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnFr
     public void gotoEditMovie(Movie movie) {
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.activity_main,new EditMovieFragment(),"tag_editfrag")
+                .addToBackStack(null)
+                .commit();
+    }
+
+    @Override
+    public ArrayList<Movie> list() {
+        return movieArrayList;
+    }
+
+
+    @Override
+    public void updateList(ArrayList<Movie> movies) {
+        movieArrayList = movies;
+    }
+
+    @Override
+    public void gotoRatingFragment() {
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.activity_main,new RatingFragment(),"tag_ratingfrag")
+                .addToBackStack(null)
+                .commit();
+    }
+
+    @Override
+    public void gotoYearFragment() {
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.activity_main,new YearFragment(),"tag_yearfrag")
                 .addToBackStack(null)
                 .commit();
     }
