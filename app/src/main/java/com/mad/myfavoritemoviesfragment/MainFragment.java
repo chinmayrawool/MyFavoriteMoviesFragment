@@ -72,7 +72,9 @@ public class MainFragment extends Fragment {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
                                     movieIndex = which;
+
                                     Movie movie = movieArrayList.get(which);
+                                    movieArrayList.remove(which);
                                     mListener.updateList(movieArrayList);
                                     mListener.gotoEditMovie(movie);
                                 }

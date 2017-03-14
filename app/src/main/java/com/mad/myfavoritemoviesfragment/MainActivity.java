@@ -9,6 +9,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements MainFragment.OnFragmentInterface,AddMovieFragment.OnFragmentInteractionListener,YearFragment.OnFragmentInterface,EditMovieFragment.OnFragmentInteractionListener{
     ArrayList<Movie> movieArrayList;
+    Movie movie;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +36,7 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnFr
     }
     @Override
     public void gotoEditMovie(Movie movie) {
+        this.movie=movie;
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.activity_main,new EditMovieFragment(),"tag_editfrag")
                 .addToBackStack(null)
@@ -91,7 +93,7 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnFr
 
     @Override
     public Movie getMovie() {
-        return null;
+        return movie;
     }
 
 
