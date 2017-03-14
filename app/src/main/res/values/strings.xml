@@ -25,6 +25,7 @@
     <string name="label_movie_title">Title:</string>
     <string name="label_movies_by_rating">Movies by Rating</string>
     <string name="btn_finish">Finish</string>
+    <string name="added">Movie added to list</string>
     <string-array name="genre_category">
         <item>Action</item>
         <item>Animation</item>

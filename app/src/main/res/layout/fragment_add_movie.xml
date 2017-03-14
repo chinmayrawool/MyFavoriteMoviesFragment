@@ -32,7 +32,8 @@
             android:ems="10"
             android:id="@+id/editTextName"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:padding="5dp"/>
+            android:padding="5dp"
+            android:maxLength="50" />
     </LinearLayout>
 
     <LinearLayout
@@ -60,7 +61,8 @@
             android:padding="5dp"
             android:background="@drawable/border"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:maxLength="1000" />
 
     </LinearLayout>
 
@@ -148,7 +150,8 @@
             android:layout_weight="0.60"
             android:padding="5dp"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:maxLength="4" />
     </LinearLayout>
 
     <LinearLayout

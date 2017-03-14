@@ -4,200 +4,203 @@
     android:layout_height="match_parent"
     tools:context="com.mad.myfavoritemoviesfragment.EditMovieFragment">
 
-   <LinearLayout
-       android:layout_width="match_parent"
-       android:layout_height="match_parent"
-       android:orientation="vertical"
-       android:id="@+id/fragment_edit">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/fragment_edit">
 
-       <LinearLayout
-           android:orientation="horizontal"
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:padding="5dp">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
 
-           <TextView
-               android:text="@string/label_movie_name"
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:id="@+id/textViewName"
-               android:layout_weight="10.23"
-               android:textAppearance="@style/TextAppearance.AppCompat.Large"
-               android:padding="5dp"
-               android:textStyle="normal|bold"
-               android:textSize="22sp" />
+            <TextView
+                android:text="@string/label_movie_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewName"
+                android:layout_weight="10.23"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:padding="5dp"
+                android:textStyle="normal|bold"
+                android:textSize="22sp" />
 
-           <EditText
-               android:layout_width="230dp"
-               android:layout_height="wrap_content"
-               android:inputType="textPersonName"
-               android:ems="10"
-               android:id="@+id/editTextName"
-               android:textAppearance="@style/TextAppearance.AppCompat.Large"
-               android:padding="5dp"/>
-       </LinearLayout>
+            <EditText
+                android:layout_width="230dp"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/editTextName"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:padding="5dp"
+                android:maxLength="50" />
+        </LinearLayout>
 
-       <LinearLayout
-           android:orientation="vertical"
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:weightSum="1"
-           android:padding="5dp">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:padding="5dp">
 
-           <TextView
-               android:text="@string/label_description"
-               android:layout_width="match_parent"
-               android:layout_height="37dp"
-               android:id="@+id/textViewDescription"
-               android:textAppearance="@style/TextAppearance.AppCompat.Large"
-               android:padding="5dp"
-               android:textStyle="normal|bold"
-               android:textSize="22sp" />
+            <TextView
+                android:text="@string/label_description"
+                android:layout_width="match_parent"
+                android:layout_height="37dp"
+                android:id="@+id/textViewDescription"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:padding="5dp"
+                android:textStyle="normal|bold"
+                android:textSize="22sp" />
 
-           <EditText
-               android:layout_width="match_parent"
-               android:layout_height="91dp"
-               android:inputType="textMultiLine"
-               android:ems="10"
-               android:id="@+id/editTextDescription"
-               android:padding="5dp"
-               android:background="@drawable/border"
-               android:textAppearance="@style/TextAppearance.AppCompat.Large"
-               android:textSize="18sp" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="91dp"
+                android:inputType="textMultiLine"
+                android:ems="10"
+                android:id="@+id/editTextDescription"
+                android:padding="5dp"
+                android:background="@drawable/border"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textSize="18sp"
+                android:maxLength="1000" />
 
-       </LinearLayout>
+        </LinearLayout>
 
-       <LinearLayout
-           android:orientation="horizontal"
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:padding="5dp"
-           >
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            >
 
-           <TextView
-               android:text="@string/label_genre"
-               android:layout_width="91dp"
-               android:layout_height="match_parent"
-               android:id="@+id/textViewGenre"
-               android:textAppearance="@style/TextAppearance.AppCompat.Large"
-               android:padding="5dp"
-               android:textStyle="normal|bold"
-               android:textSize="22sp" />
+            <TextView
+                android:text="@string/label_genre"
+                android:layout_width="91dp"
+                android:layout_height="match_parent"
+                android:id="@+id/textViewGenre"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:padding="5dp"
+                android:textStyle="normal|bold"
+                android:textSize="22sp" />
 
-           <Spinner
-               android:layout_width="match_parent"
-               android:layout_height="match_parent"
-               android:id="@+id/spinnerGenre"
-               android:entries="@array/genre_category"
-               android:padding="5dp"/>
-       </LinearLayout>
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/spinnerGenre"
+                android:entries="@array/genre_category"
+                android:padding="5dp"/>
+        </LinearLayout>
 
-       <LinearLayout
-           android:orientation="horizontal"
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:padding="5dp">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
 
-           <TextView
-               android:text="@string/label_rating"
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:id="@+id/textViewRating"
-               android:layout_weight="0.10"
-               android:textAppearance="@style/TextAppearance.AppCompat.Large"
-               android:padding="5dp"
-               android:textStyle="normal|bold"
-               android:textSize="22sp" />
+            <TextView
+                android:text="@string/label_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewRating"
+                android:layout_weight="0.10"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:padding="5dp"
+                android:textStyle="normal|bold"
+                android:textSize="22sp" />
 
-           <SeekBar
-               android:layout_width="wrap_content"
-               android:layout_height="match_parent"
-               android:id="@+id/seekBarRating"
-               android:layout_weight="0.86"
-               android:max="5"
-               android:progress="1"
-               android:padding="5dp"/>
+            <SeekBar
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/seekBarRating"
+                android:layout_weight="0.86"
+                android:max="5"
+                android:progress="1"
+                android:padding="5dp"/>
 
-           <TextView
-               android:layout_width="23dp"
-               android:layout_height="38dp"
-               android:id="@+id/textViewRatingOutput"
-               android:layout_weight="0.15"
-               android:padding="5dp"
-               android:textAppearance="@style/TextAppearance.AppCompat.Large"
-               android:textSize="18sp" />
+            <TextView
+                android:layout_width="23dp"
+                android:layout_height="38dp"
+                android:id="@+id/textViewRatingOutput"
+                android:layout_weight="0.15"
+                android:padding="5dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textSize="18sp" />
 
-       </LinearLayout>
+        </LinearLayout>
 
-       <LinearLayout
-           android:orientation="horizontal"
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:padding="5dp">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
 
-           <TextView
-               android:text="@string/label_year"
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:id="@+id/textViewYear"
-               android:layout_weight="1.30"
-               android:textAppearance="@style/TextAppearance.AppCompat.Large"
-               android:padding="5dp"
-               android:textStyle="normal|bold"
-               android:textSize="22sp" />
+            <TextView
+                android:text="@string/label_year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewYear"
+                android:layout_weight="1.30"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:padding="5dp"
+                android:textStyle="normal|bold"
+                android:textSize="22sp" />
 
-           <EditText
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:inputType="number"
-               android:ems="10"
-               android:id="@+id/editTextYear"
-               android:layout_weight="0.49"
-               android:padding="5dp"
-               android:textAppearance="@style/TextAppearance.AppCompat.Large"
-               android:textSize="18sp" />
-       </LinearLayout>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/editTextYear"
+                android:layout_weight="0.49"
+                android:padding="5dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textSize="18sp"
+                android:maxLength="4" />
+        </LinearLayout>
 
-       <LinearLayout
-           android:orientation="horizontal"
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:padding="5dp">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
 
-           <TextView
-               android:text="@string/label_imdb"
-               android:layout_width="93dp"
-               android:layout_height="wrap_content"
-               android:id="@+id/textViewIMDB"
-               android:textAppearance="@style/TextAppearance.AppCompat.Large"
-               android:padding="5dp"
-               android:textStyle="normal|bold"
-               android:textSize="22sp" />
+            <TextView
+                android:text="@string/label_imdb"
+                android:layout_width="93dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewIMDB"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:padding="5dp"
+                android:textStyle="normal|bold"
+                android:textSize="22sp" />
 
-           <EditText
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:inputType="text"
-               android:ems="10"
-               android:id="@+id/editTextIMDBLink"
-               android:layout_weight="1.10"
-               android:padding="5dp"
-               android:textAppearance="@style/TextAppearance.AppCompat.Large"
-               android:textSize="18sp" />
-       </LinearLayout>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:ems="10"
+                android:id="@+id/editTextIMDBLink"
+                android:layout_weight="1.10"
+                android:padding="5dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textSize="18sp" />
+        </LinearLayout>
 
-       <Button
-           android:text="@string/save_changes"
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:id="@+id/buttonMovieSaveChanges"
-           android:padding="5dp"
-           android:layout_marginRight="80dp"
-           android:layout_marginLeft="80dp"
-           android:layout_marginTop="10dp"
-           android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-           android:textStyle="normal|bold" />
+        <Button
+            android:text="@string/save_changes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonMovieSaveChanges"
+            android:padding="5dp"
+            android:layout_marginRight="80dp"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="10dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textStyle="normal|bold" />
 
-   </LinearLayout>
+    </LinearLayout>
 
 </FrameLayout>

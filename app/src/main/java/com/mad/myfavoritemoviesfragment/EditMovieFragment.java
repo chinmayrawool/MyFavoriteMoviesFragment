@@ -46,7 +46,7 @@ public class EditMovieFragment extends Fragment {
 
     public void onButtonPressed(Movie movie) {
         if (mListener != null) {
-            mListener.sendMovie(movie);
+            //mListener.sendMovie(movie);
         }
     }
 
@@ -70,8 +70,9 @@ public class EditMovieFragment extends Fragment {
 
 
     public interface OnFragmentInteractionListener {
-        void sendMovie(Movie movie);
+        //void sendMovie(Movie movie);
         Movie getMovie();
+        void addmovie(Movie new1,Movie old1);
     }
 
     @Override
@@ -80,6 +81,7 @@ public class EditMovieFragment extends Fragment {
 
         Movie movie = new Movie();
         movie = mListener.getMovie();
+        final Movie movieOld = movie;
         editText = (EditText) getView().findViewById(R.id.editTextName);
         editText.setText(movie.getName());
         editText = (EditText) getView().findViewById(R.id.editTextDescription);
@@ -166,12 +168,14 @@ public class EditMovieFragment extends Fragment {
                     Toast.makeText(mainActivity,getResources().getString(R.string.error_description),Toast.LENGTH_SHORT).show();
                 }else if (movie.getDescription().length()>1000) {
                     Toast.makeText(mainActivity,getResources().getString(R.string.error_description_length),Toast.LENGTH_SHORT).show();
-                }else if(movie.getYear()<1800 || movie.getYear()>2030){
+                }else if(movie.getYear()<1800 || movie.getYear()>2050){
                     Toast.makeText(mainActivity,getResources().getString(R.string.error_year),Toast.LENGTH_SHORT).show();
                 }else if(movie.getImdbLink().equals("")){
                     Toast.makeText(mainActivity,getResources().getString(R.string.error_imdblink),Toast.LENGTH_SHORT).show();
                 }else{
                     onButtonPressed(movie);
+                    Toast.makeText(mainActivity,movie.getName() + " changed",Toast.LENGTH_SHORT).show();
+                    mListener.addmovie(movie,movieOld);
                 }
             }
         });

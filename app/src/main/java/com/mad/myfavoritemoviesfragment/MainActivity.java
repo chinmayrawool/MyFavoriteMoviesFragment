@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnFr
         getSupportFragmentManager().beginTransaction()
                 .add(R.id.activity_main,new MainFragment(),"tag_mainfrag")
                 .commit();
+        getSupportActionBar().setTitle("My Favorite Movies");
 
     }
 
@@ -33,6 +34,7 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnFr
                 .replace(R.id.activity_main,new AddMovieFragment(),"tag_addfrag")
                 .addToBackStack(null)
                 .commit();
+        getSupportActionBar().setTitle(R.string.add_movie);
     }
     @Override
     public void gotoEditMovie(Movie movie) {
@@ -41,6 +43,7 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnFr
                 .replace(R.id.activity_main,new EditMovieFragment(),"tag_editfrag")
                 .addToBackStack(null)
                 .commit();
+        getSupportActionBar().setTitle("Edit Movie");
 
 
 
@@ -57,6 +60,7 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnFr
                 .replace(R.id.activity_main,new MainFragment(),"tag_mainfrag")
                 .addToBackStack(null)
                 .commit();
+        getSupportActionBar().setTitle("My Favorite Movies");
     }
 
 
@@ -71,6 +75,7 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnFr
                 .replace(R.id.activity_main,new RatingFragment(),"tag_ratingfrag")
                 .addToBackStack(null)
                 .commit();
+        getSupportActionBar().setTitle("Movies by Rating");
     }
 
     @Override
@@ -79,6 +84,7 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnFr
                 .replace(R.id.activity_main,new YearFragment(),"tag_yearfrag")
                 .addToBackStack(null)
                 .commit();
+        getSupportActionBar().setTitle("Movies by Year");
     }
 
     @Override
@@ -89,6 +95,7 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnFr
                 .replace(R.id.activity_main,new MainFragment(),"tag_mainfrag")
                 .addToBackStack(null)
                 .commit();
+        getSupportActionBar().setTitle("My Favorite Movies");
     }
 
     @Override
@@ -96,5 +103,24 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnFr
         return movie;
     }
 
+    @Override
+    public void addmovie(Movie new1, Movie old1) {
+        movieArrayList.remove(old1);
+        movieArrayList.add(new1);
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.activity_main,new MainFragment(),"tag_mainfrag")
+                .addToBackStack(null)
+                .commit();
+        getSupportActionBar().setTitle("My Favorite Movies");
+    }
+
+    public void onBackPressed() {
+        if(getSupportFragmentManager().getBackStackEntryCount() > 0){
+            getSupportFragmentManager().popBackStack();
+            getSupportActionBar().setTitle("My Favorite Movies");
+        }else {
+            super.onBackPressed();
+        }
+    }
 
 }

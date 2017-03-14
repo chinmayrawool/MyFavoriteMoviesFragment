@@ -74,7 +74,7 @@ public class MainFragment extends Fragment {
                                     movieIndex = which;
 
                                     Movie movie = movieArrayList.get(which);
-                                    movieArrayList.remove(which);
+                                    //movieArrayList.remove(movieIndex);
                                     mListener.updateList(movieArrayList);
                                     mListener.gotoEditMovie(movie);
                                 }

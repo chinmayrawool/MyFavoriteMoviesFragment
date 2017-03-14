@@ -134,13 +134,13 @@ public class AddMovieFragment extends Fragment {
                     Toast.makeText(mainActivity,getResources().getString(R.string.error_name),Toast.LENGTH_SHORT).show();
                 }else if(movie.getDescription().equals("") || movie.getDescription().length()>1000){
                     Toast.makeText(mainActivity,getResources().getString(R.string.error_description),Toast.LENGTH_SHORT).show();
-                }else if(movie.getYear()<1800 || movie.getYear()>2030){
+                }else if(movie.getYear()<1800 || movie.getYear()>2050){
                     Toast.makeText(mainActivity,getResources().getString(R.string.error_year),Toast.LENGTH_SHORT).show();
                 }else if(movie.getImdbLink().equals("")){
                     Toast.makeText(mainActivity,getResources().getString(R.string.error_imdblink),Toast.LENGTH_SHORT).show();
                 }else{
                     onButtonPressed(movie);
-
+                    Toast.makeText(mainActivity, R.string.added,Toast.LENGTH_SHORT).show();
                 }
             }
         });
