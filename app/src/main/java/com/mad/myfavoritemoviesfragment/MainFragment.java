@@ -73,6 +73,7 @@ public class MainFragment extends Fragment {
                                 public void onClick(DialogInterface dialog, int which) {
                                     movieIndex = which;
                                     Movie movie = movieArrayList.get(which);
+                                    mListener.updateList(movieArrayList);
                                     mListener.gotoEditMovie(movie);
                                 }
                             });
@@ -116,14 +117,25 @@ public class MainFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 //movieArrayList= mListener.list();
-                mListener.gotoYearFragment();
+                movieArrayList = mListener.list();
+                if(movieArrayList.size()>0) {
+                    mListener.gotoYearFragment();
+                }else{
+                    Toast.makeText(getActivity(),"No movies found!",Toast.LENGTH_LONG).show();
+                }
             }
         });
         getView().findViewById(R.id.buttonByRating).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //movieArrayList= mListener.list();
-                mListener.gotoRatingFragment();
+
+                movieArrayList = mListener.list();
+                if(movieArrayList.size()>0) {
+                    mListener.gotoRatingFragment();
+                }else{
+                    Toast.makeText(getActivity(),"No movies found!",Toast.LENGTH_LONG).show();
+                }
             }
         });
 

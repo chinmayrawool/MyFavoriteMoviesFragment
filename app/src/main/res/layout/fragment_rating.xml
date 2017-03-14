@@ -40,7 +40,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/textViewTitleOutput"
+                android:id="@+id/textViewTitleOutput1"
                 android:layout_weight="3.66"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 android:padding="3dp"/>
@@ -56,7 +56,7 @@
                 android:text="@string/label_description"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/textViewDescription"
+                android:id="@+id/textViewDescription1"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 android:padding="3dp"
                 android:textStyle="normal|bold" />
@@ -64,7 +64,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="84dp"
-                android:id="@+id/textViewDescriptionOutput"
+                android:id="@+id/textViewDescriptionOutput1"
                 android:padding="3dp"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 android:textSize="18sp"
@@ -81,7 +81,7 @@
                 android:text="@string/label_genre"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/textViewGenre"
+                android:id="@+id/textViewGenre1"
                 android:layout_weight="0.33"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 android:padding="3dp"
@@ -90,7 +90,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/textViewGenreOutput"
+                android:id="@+id/textViewGenreOutput1"
                 android:layout_weight="1.78"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 android:padding="3dp"
@@ -107,7 +107,7 @@
                 android:text="@string/label_rating"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/textViewRating"
+                android:id="@+id/textViewRating1"
                 android:layout_weight="0.16"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 android:padding="3dp"
@@ -116,7 +116,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/textViewRatingOutput"
+                android:id="@+id/textViewRatingOutput1"
                 android:layout_weight="1"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 android:padding="3dp"
@@ -133,7 +133,7 @@
                 android:text="@string/label_year"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/textViewYear"
+                android:id="@+id/textViewYear1"
                 android:layout_weight="0.24"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 android:padding="3dp"
@@ -142,7 +142,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/textViewYearOutput"
+                android:id="@+id/textViewYearOutput1"
                 android:layout_weight="1"
                 android:padding="3dp"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
@@ -159,7 +159,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/textViewIMDB"
+                android:id="@+id/textViewIMDB1"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 android:text="@string/label_imdb"
                 android:padding="3dp"
@@ -168,7 +168,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/textViewIMDBOutput"
+                android:id="@+id/textViewIMDBOutput1"
                 android:padding="3dp"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 android:textSize="18sp" />
@@ -187,21 +187,21 @@
                 android:layout_width="52dp"
                 android:layout_height="49dp"
                 app:srcCompat="@drawable/first"
-                android:id="@+id/imageButtonFirst"
+                android:id="@+id/imageButtonFirst1"
                 android:scaleType="fitCenter" />
 
             <ImageButton
                 android:layout_width="42dp"
                 android:layout_height="49dp"
                 app:srcCompat="@drawable/previous"
-                android:id="@+id/imageButtonPrevious"
+                android:id="@+id/imageButtonPrevious1"
                 android:scaleType="fitCenter" />
 
             <Button
                 android:text="@string/btn_finish"
                 android:layout_width="128dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/buttonFinishRating"
+                android:id="@+id/buttonFinishRating1"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textStyle="normal|bold" />
 
@@ -209,7 +209,7 @@
                 android:layout_width="46dp"
                 android:layout_height="50dp"
                 app:srcCompat="@drawable/next"
-                android:id="@+id/imageButtonNext"
+                android:id="@+id/imageButtonNext1"
                 android:scaleType="fitCenter"
                 android:layout_weight="0.11" />
 
@@ -217,7 +217,7 @@
                 android:layout_width="44dp"
                 android:layout_height="match_parent"
                 app:srcCompat="@drawable/last"
-                android:id="@+id/imageButtonLast"
+                android:id="@+id/imageButtonLast1"
                 android:scaleType="fitCenter" />
 
         </LinearLayout>

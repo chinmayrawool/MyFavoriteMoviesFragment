@@ -71,17 +71,15 @@ public class EditMovieFragment extends Fragment {
 
     public interface OnFragmentInteractionListener {
         void sendMovie(Movie movie);
+        Movie getMovie();
     }
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-
-    }
-
-    public void receiveMovie(Movie movie){
-
+        Movie movie = new Movie();
+        movie = mListener.getMovie();
         editText = (EditText) getView().findViewById(R.id.editTextName);
         editText.setText(movie.getName());
         editText = (EditText) getView().findViewById(R.id.editTextDescription);
@@ -173,9 +171,11 @@ public class EditMovieFragment extends Fragment {
                 }else if(movie.getImdbLink().equals("")){
                     Toast.makeText(mainActivity,getResources().getString(R.string.error_imdblink),Toast.LENGTH_SHORT).show();
                 }else{
-                   onButtonPressed(movie);
+                    onButtonPressed(movie);
                 }
             }
         });
     }
+
+
 }

@@ -1,18 +1,24 @@
 package com.mad.myfavoritemoviesfragment;
 
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity implements MainFragment.OnFragmentInterface,AddMovieFragment.OnFragmentInteractionListener,YearFragment.OnFragmentInterface{
+public class MainActivity extends AppCompatActivity implements MainFragment.OnFragmentInterface,AddMovieFragment.OnFragmentInteractionListener,YearFragment.OnFragmentInterface,EditMovieFragment.OnFragmentInteractionListener{
     ArrayList<Movie> movieArrayList;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         movieArrayList = new ArrayList<Movie>();
+        for(int i=0;i<=2;i++){
+            Movie m =new Movie("name"+i,"description"+i,"link"+i,"Action",2000+i,1+i);
+            movieArrayList.add(m);
+            //movieNames = new String[movieArrayList.size()];
+        }
         getSupportFragmentManager().beginTransaction()
                 .add(R.id.activity_main,new MainFragment(),"tag_mainfrag")
                 .commit();
@@ -33,6 +39,9 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnFr
                 .replace(R.id.activity_main,new EditMovieFragment(),"tag_editfrag")
                 .addToBackStack(null)
                 .commit();
+
+
+
     }
 
     @Override
@@ -79,4 +88,11 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnFr
                 .addToBackStack(null)
                 .commit();
     }
+
+    @Override
+    public Movie getMovie() {
+        return null;
+    }
+
+
 }
